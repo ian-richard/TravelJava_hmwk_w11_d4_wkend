@@ -1,20 +1,19 @@
 public class Plane {
 
-    private int flightNo;
-    private PlaneType planType;
+
+    private PlaneType planeType;
 
 
-    public Plane(int flightNo, PlaneType planeType) {
-        this.flightNo = flightNo;
-        this.planType = planeType;
+    public Plane(PlaneType planeType) {
+        this.planeType = planeType;
 
     }
 
-    public int getFlightNo(){ return flightNo; }
+    public PlaneType getType(){ return planeType; }
 
-    public PlaneType getType(){ return type; }
+    public int getCapacityFromEnum(){ return this.planeType.getCapacity();}
 
-    public int getCapacityFromEnum(){ return this.planeType.}
+    public int getWeightFromEnum(){ return this.planeType.getWeight();}
 
 
 
