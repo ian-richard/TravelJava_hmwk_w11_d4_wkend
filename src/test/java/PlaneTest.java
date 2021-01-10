@@ -16,7 +16,7 @@ public class PlaneTest {
     public void hasType(){ assertEquals(PlaneType.BOEING747, plane1.getType());}
 
     @Test
-    public void hasCapacity(){ assertEquals(75, plane1.getCapacityFromEnum());}
+    public void hasCapacity(){ assertEquals(3, plane1.getCapacityFromEnum());}
 
     @Test
     public void hasWeight(){ assertEquals(150, plane1.getWeightFromEnum());}

@@ -21,5 +21,26 @@ public class Flight {
 
     public int getFlightNo(){ return flightNo; }
 
-    public Plane getPlaneType(){ return this.plane; }
+    public PlaneType getPlaneType(){ return this.plane.getType(); }
+
+    public int totalSeats(){ return this.plane.getCapacityFromEnum();}
+    
+    public int listSize(){ return this.passengers.size();}
+
+    public void addPassenger(Passenger passenger){
+        if (this.listSize() < this.totalSeats()) {
+            this.passengers.add(passenger);
+        }
+    }
+
+    public int availableSeats() {
+        int availableSeatNo;
+        int totalSeatsNo;
+        int result;
+        totalSeatsNo = this.totalSeats();
+        availableSeatNo = this.listSize();
+        result = totalSeatsNo - availableSeatNo;
+        return result;
+    }
+
 }
